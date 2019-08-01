@@ -15,6 +15,7 @@ return [
     |
     */
 
+    // GANTI JUGA DISINI JADI mysql
     'default' => env('DB_CONNECTION', 'postgres'),
 
     /*
