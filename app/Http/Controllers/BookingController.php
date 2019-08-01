@@ -9,11 +9,11 @@ use Session;
 
 use Illuminate\Http\Request;
 use App\Testimoni;
-use App\Lapang;
 
 class BookingController extends Controller
 {
     //ADMIN
+    //KOMEN
     public function index()
     {
         $booking = new Booking;
