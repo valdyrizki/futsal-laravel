@@ -12,7 +12,7 @@ class ApiController extends Controller
 
     public function indexapi(){
         $lapang = Lapang::select('nama_lapang','harga_lapang','jenis_lapang','gambar_lapang')
-        ->where('status_lapang', 'Aktif')
+        ->where('status_lapang', '1')
         ->get();
         return $lapang;
     }
@@ -57,7 +57,7 @@ class ApiController extends Controller
                 'name' => $request->nama,
                 'email' => $request->email,
                 'password' => $request->password,
-                'level' => 'Member',
+                'level' => '1',
                 'nohp' => $request->nohp,
                 'created_at' => date('Y/m/d H:i:s'),
                 'updated_at' => date('Y/m/d H:i:s')
@@ -92,22 +92,9 @@ class ApiController extends Controller
         $booking = DB::table('bookings')
         ->join('lapangs', 'bookings.id_lapang', '=', 'lapangs.id_lapang')
         ->select('bookings.*', 'lapangs.nama_lapang', 'lapangs.harga_lapang', 'lapangs.jenis_lapang','lapangs.gambar_lapang')
-        // ->where('tbbooking.id', $id)
         ->get();
 
-            // foreach ($login as $l) {
-            //     if (Hash::check($pass, $l->password)) {
-            //         $result ["hasil"] = "1";
-            //         $result ["name"] = $l->name;
-            //         $result ["email"] = $l->email;
-            //         $result ['id'] = $l->id;
-            //         $result ['nohp'] = $l->nohp;
-            //         $result ['password'] = $l->password;
-            //         }else {
-            //         $result ['hasil']= '0';
-            //         }
 
-            // }
 
             echo json_encode($booking);
     }
@@ -128,7 +115,7 @@ class ApiController extends Controller
         $namalapang = $request->nama_lapang;
         $tgl = $request->tgl_booking;
         $waktu = $request->waktu_booking;
-        $status = "Pending";
+        $status = "1";
 
         //ambil id lapang
         $datalapang = DB::table('lapangs')
@@ -149,7 +136,7 @@ class ApiController extends Controller
         ->where('tgl_booking',$tgl)
         ->where('waktu_booking',$waktu)
         ->where('id_lapang',$idlapang)
-        ->where('status_booking','Pending','Konfirmasi')
+        ->where('status_booking','1','2')
         ->get();
         if (count($databooking) > 0) {
             $result ["hasil"] = "2";
