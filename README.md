@@ -10,6 +10,6 @@ Web ini dibuat dengan menggunakan Laravel 5.7 dan database MySQL / Postgree
 4. Jika sudah pergi ke menu User, lalu tambahkan user admin dan member. (untuk member bisa juga register di menu yang sudah di sediakan).
 
 Untuk konsultasi hubungi :
-WA : 082213736220
-IG : @valdyrizki
+- WA : 082213736220
+- IG : @valdyrizki
 
