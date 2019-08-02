@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Able Pro Responsive Bootstrap 4 Admin Template by Phoenixcoded</title>
+	<title>E-Futsal</title>
 
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
@@ -56,7 +56,7 @@
                             <form class="md-float-material" action="/prosesregister" method="POST">
                                 @csrf
 								<div class="text-center">
-									<img src="assets/images/logo-blue.png" alt="logo">
+									<h1> E-FUTSAL </h1>
 								</div>
                                 <h3 class="text-center txt-primary">Create an account </h3>
 

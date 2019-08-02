@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Able Pro Responsive Bootstrap 4 Admin Template by Phoenixcoded</title>
+	<title>E-Futsal</title>
 	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
 	<!--[if lt IE 9]>
@@ -64,7 +64,7 @@
                         <form class="md-float-material" action="/prosesloginadmin" method="POST">
                             @csrf
                             <div class="text-center">
-                                <img src="assets/images/logo-blue.png" alt="logo">
+                                <h1> E-FUTSAL </h1>
                             </div>
                             <h3 class="text-center txt-primary">Login untuk booking </h3>
 
