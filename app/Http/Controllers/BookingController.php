@@ -124,7 +124,9 @@ class BookingController extends Controller
        $this->validate($request, [
            'id_lapang' => 'required',
            'tgl_booking' => 'required',
-           'waktu_booking' => 'required'
+           'waktu_booking' => 'required',
+           'tgl_booking' => 'required|after:yesterday',
+            'waktu_booking' => 'required|after:now'
        ]);
 
        $cek = Booking::where('id_lapang',$request->id_lapang)

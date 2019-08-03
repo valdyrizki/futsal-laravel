@@ -46,7 +46,7 @@
                                                     <div class="user-block-2-activities">
                                                         <div class="user-block-2-active">
                                                             <i class="icofont icofont-price"></i> Harga
-                                                            <label class="label label-primary">Rp.{{$l->harga_lapang}}</label>
+                                                            <label class="label label-primary">{{Fungsi::getRupiah($l->harga_lapang)}}</label>
                                                         </div>
                                                     </div>
                                                     <div class="user-block-2-activities">
